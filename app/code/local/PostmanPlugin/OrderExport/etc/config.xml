@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <PostmanPlugin_OrderExport>
+      <version>0.1.0</version>
+    </PostmanPlugin_OrderExport>
+  </modules>
+  <global>
+    <helpers>
+      <orderexport>
+        <class>PostmanPlugin_OrderExport_Helper</class>
+      </orderexport>
+    </helpers>
+    <models>
+      <PostmanPlugin_orderexport>
+        <class>PostmanPlugin_OrderExport_Model</class>
+      </PostmanPlugin_orderexport>
+    </models>
+    <resources>
+      <PostmanPlugin_orderexport_setup>
+        <setup>
+          <module>PostmanPlugin_OrderExport</module>
+          <class>Mage_Core_Model_Resource_Setup</class>
+        </setup>
+      </PostmanPlugin_orderexport_setup>
+    </resources>
+    <events>
+      <sales_order_place_after>
+        <observers>
+          <PostmanPlugin_orderexport>
+            <class>PostmanPlugin_orderexport/observer</class>
+            <method>exportOrder</method>
+          </PostmanPlugin_orderexport>
+        </observers>
+      </sales_order_place_after>
+	  
+	  
+	  
+	  
+	   <model_config_data_save_before>
+            <observers>
+                <onstepcheckout>
+                    <type>singleton</type>
+                    <class>PostmanPlugin_OrderExport_Model_ValidateCredential</class>
+                    <method>ValidatePalomaCredential</method>
+                </onstepcheckout>
+            </observers>
+           </model_config_data_save_before>   
+	  
+	  
+	  
+    </events>
+  </global>
+  <frontend>
+    <events>
+      <checkout_onepage_controller_success_action>
+        <observers>
+          <PostmanPlugin_orderexport>
+            <class>PostmanPlugin_orderexport/observer</class>
+            <method>newCustomer</method>
+          </PostmanPlugin_orderexport>
+        </observers>
+      </checkout_onepage_controller_success_action>
+    </events>
+  </frontend>
+
+
+
+  <!-- ... -->
+  <adminhtml>
+    <acl>
+      <resources>
+        <admin>
+          <children>
+            <system>
+              <children>
+                <config>
+                  <children>
+                    <PostmanPlugin_OrderExport_options>
+                      <title>Orderexport Module Section</title>
+                    </PostmanPlugin_OrderExport_options>
+                  </children>
+                </config>
+              </children>
+            </system>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>
+  <!-- ... -->
+
+</config>

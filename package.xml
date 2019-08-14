@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>PostmanPlugin</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Automatically send your customer to an address list in Postman, Paloma&#x2019;s tool for email marketing and newsletters.</summary>
+    <description>When an order is processed this plugin is automatically going to send the customer information over to Postman and create a subscriber in the selected address list.</description>
+    <notes>Initial Release</notes>
+    <authors><author><name>Paloma</name><user>Zakaria</user><email>teknik@paloma.se</email></author></authors>
+    <date>2015-10-14</date>
+    <time>10:01:21</time>
+    <contents><target name="magelocal"><dir name="PostmanPlugin"><dir name="OrderExport"><dir name="Helper"><file name="Data.php" hash="acfd235d6f1752564c04aea8c9847c88"/></dir><dir name="Model"><file name="Export.php" hash="9c51cdf365759f368ee599ebcc0a94a7"/><file name="Observer.php" hash="6c795942647c530786c7acc2f65aba58"/><file name="ValidateCredential.php" hash="5018a3e4c427aad27984032a1f871d98"/></dir><dir name="etc"><file name="config.xml" hash="486756157cb1761f7d69159be39be05b"/><file name="system.xml" hash="393b603a8b8680c6ca66414511167e99"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="PostmanPlugin_OrderExport.xml" hash="06cb77846399ddd9aca47f2c2144252b"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <PostmanPlugin_OrderExport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </PostmanPlugin_OrderExport>
+    </modules>
+</config>

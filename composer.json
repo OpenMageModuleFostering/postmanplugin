@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/PostmanPlugin",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Automatically send your customer to an address list in Postman, Paloma’s tool for email marketing and newsletters.",
+    "authors": [
+    {
+        "name": "Paloma",
+        "email": "teknik@paloma.se"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
