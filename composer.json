@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/PostmanPlugin",
+    "name": "openmage-module-fostering\/postmanplugin",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Automatically send your customer to an address list in Postman, Paloma\u2019s tool for email marketing and newsletters.",
     "authors": [
